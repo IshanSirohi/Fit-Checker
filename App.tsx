@@ -16,6 +16,7 @@ import { defaultWardrobe } from './wardrobe';
 import Footer from './components/Footer';
 import { getFriendlyErrorMessage } from './lib/utils';
 import Spinner from './components/Spinner';
+import SettingsMenu from './components/SettingsMenu';
 
 const POSE_INSTRUCTIONS = [
   "Full frontal view, hands on hips",
@@ -215,6 +216,7 @@ const App: React.FC = () => {
 
   return (
     <div className="font-sans">
+      <SettingsMenu />
       <AnimatePresence mode="wait">
         {!modelImageUrl ? (
           <motion.div
